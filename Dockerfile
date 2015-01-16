@@ -9,5 +9,6 @@ WORKDIR /mnt
 
 # Use custom jshint options
 ADD .jshintrc /root/.jshintrc
+ADD kickoff.sh /root/kickoff.sh
 
-ENTRYPOINT ["gulp"]
+ENTRYPOINT ["/root/kickoff.sh"]
