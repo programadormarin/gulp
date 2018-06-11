@@ -1,13 +1,9 @@
 # Pull base image.
-FROM dockerfile/nodejs
+FROM zenoss/gulp
 
-# global install gulp and jshint
-RUN npm install -g gulp jshint
+# global install gulp -sass
 RUN npm install -g gulp-sass
 
-# Define working directory.
-WORKDIR /mnt
-
-ADD kickoff.sh /root/kickoff.sh
+ADD ./kickoff.sh
 
 ENTRYPOINT ["/root/kickoff.sh"]
