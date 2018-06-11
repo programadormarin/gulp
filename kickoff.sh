@@ -22,3 +22,6 @@ chown "$USERNAME":"$USERGROUP" "$USERHOME"
 
 # kick off gulp with passed in args as user
 su - "$USERNAME" -c "cd /mnt && $*"
+npm cache clean -f
+sudo npm install -g n
+sudo n stable
