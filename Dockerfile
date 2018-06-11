@@ -2,6 +2,7 @@
 FROM node:alpine
 
 # global install gulp -sass
+RUN apk add --no-cache libc6-compat
 RUN npm install -g gulp jshint
 
 WORKDIR /mnt
